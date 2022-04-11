@@ -20,5 +20,9 @@ def movie_recs_list():
     except IndexError as err:
         return {"error": f"Maybe movie_ID does not exist in database. {err}"} 
 
+@app.route("/")
+def check_api():
+    return "<H2>api is working<H2>"
+    
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80, debug=False)
